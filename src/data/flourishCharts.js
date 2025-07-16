@@ -43,10 +43,3 @@ export const flourishCharts = {
     description: "Clasificación de los monumentos del siglo",
   },
 }
-
-// URL del mapa interactivo principal
-export const mapChart = {
-  url: "https://flo.uri.sh/visualisation/your-map-id/embed",
-  title: "Mapa Mundial de Monumentos",
-  description: "Distribución geográfica de monumentos por siglo y región",
-}
