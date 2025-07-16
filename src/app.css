@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+:root {
+  --primary-color: #597d60;
+  --secondary-color: #4b5c4b;
+  --brand-color: #db574d;
+  --bad-color: #9c241f;
+  --regular-color: #f48153;
+  --good-color: #83d3d4;
+  --excelent-color: #2d8183;
+  --green-color: #526b54;
+  --clear-color: #f2f0ed;
+  --grey-color: #d9d9d9;
+  --text-color: #333;
+  --background-color: #ffffff;
+  --font-family: "Montserrat", sans-serif;
+  --font-font: "DM Serif Display", serif;
+  --logo-font: "Monoton";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-font);
+  font-weight: 400;
+}
+
+.logo-font {
+  font-family: var(--logo-font);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--clear-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bad-color);
+}
