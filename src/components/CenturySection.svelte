@@ -64,10 +64,33 @@
             <div class="chart-header">
                 <h4 class="chart-title">{century.graphs.description}</h4>
             </div>
+             <div class="grafico-flourish">
+              <iframe
+                src={century.graphs.url}
+                title={century.graphs.description}
+                class="flourish-embed-iframe"
+                frameborder="0"
+                scrolling="no"
+                style="width: 100%; height: 600px;"
+                sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
+              </iframe>
+              </div>
+
+
+
+
+
+            {#if index == "1"}
+              <div class="grafico-flourish">
+                <iframe src='https://flo.uri.sh/visualisation/24255347/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+              </div>
+            {/if}
+
+
+
+
             <div class="chart-content">
-                {#if century == "xi"}
-                  <iframe src='https://flo.uri.sh/visualisation/24255347/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe><div style='width:100%!;margin-top:4px!important;text-align:right!important;'><a class='flourish-credit' href='https://public.flourish.studio/visualisation/24255347/?utm_source=embed&utm_campaign=visualisation/24255347' target='_top' style='text-decoration:none!important'>Ver visualización interactiva en Flourish</a></div>
-                {/if}
+                
             </div>
             </div>
 
@@ -236,55 +259,17 @@
     margin-bottom: 0.5rem;
   }
   
-  .chart-description {
-    color: #db574D;
-    opacity: 0.7;
-  }
   
   .chart-content {
     padding: 1.5rem;
+  margin-top: 50px;
+  margin-bottom: 70px;
   }
-  
-  .chart-placeholder {
-    height: 16rem;
-    background: linear-gradient(135deg, var(--clear-color) 0%, var(--grey-color) 100%);
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px dashed var(--grey-color);
-  }
-  
-  .chart-icon {
-    width: 4rem;
-    height: 4rem;
-    background: var(--brand-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-  
-  .chart-number {
-    color: white;
-    font-weight: bold;
-    font-size: 1.25rem;
-  }
-  
-  .chart-label {
-    color: var(--text-color);
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-  }
-  
-  .chart-sublabel {
-    color: var(--text-color);
-    opacity: 0.7;
-    font-size: 0.875rem;
-  }
-
+.grafico-flourish {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: 'Poppins', sans-serif;
+}
   .carousel-container {
     position: relative;
     width: 50%;
