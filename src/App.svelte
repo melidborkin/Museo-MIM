@@ -235,6 +235,16 @@
     scrollToSection('explanation');
   }
 
+  let previousCentury = -1;
+
+  $: if (activeCentury !== previousCentury) {
+    const sectionEl = document.getElementById('century-section');
+    if (sectionEl) {
+      sectionEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    previousCentury = activeCentury;
+  }
+
   // Funciones de accesibilidad
   function handleKeydown(event, callback) { 
     if (event.key === 'Enter' || event.key === ' ') {
@@ -304,23 +314,26 @@ onMount(() => {
     </div>
     <p class="description"> Para entrar a la sala deseada presioná en el Siglo correspondiente </p>
 
-    
-    <CenturySection 
-      century={centuries[activeCentury]} 
-      index={activeCentury} 
-    />
-
-    <div class="nav-salas">
-      <button on:click={() => activeCentury = Math.max(0, activeCentury - 1)} disabled={activeCentury === 0}>
-        ← Anterior
-      </button>
-
-      <span>Sala {activeCentury + 1} / {centuries.length}</span>
-
-      <button on:click={() => activeCentury = Math.min(centuries.length - 1, activeCentury + 1)} disabled={activeCentury === centuries.length - 1}>
-        Siguiente →
-      </button>
+    <div id="century-section">
+      <CenturySection 
+        century={centuries[activeCentury]} 
+        index={activeCentury} 
+      />
     </div>
+
+    <div class="nav-container">
+      <div class="nav-salas">
+        <button on:click={() => activeCentury = Math.max(0, activeCentury - 1)} disabled={activeCentury === 0}>
+          ← Anterior
+        </button>
+
+        <span>Sala {activeCentury + 1} / {centuries.length}</span>
+
+        <button on:click={() => activeCentury = Math.min(centuries.length - 1, activeCentury + 1)} disabled={activeCentury === centuries.length - 1}>
+          Siguiente →
+        </button>
+      </div>
+      </div>
 
   </div>
     
@@ -382,6 +395,23 @@ onMount(() => {
   font-weight: bold;
   transform: scale(1.05);
 }
+.nav-container{
+  align-items: flex-start;
+  margin: 4rem auto 2rem auto;
+}
+
+.selector-salas {
+  display: flex;
+  gap: 1rem;
+  margin: 8rem auto 2rem auto;
+  max-width: 1200px;
+  padding: 3rem, 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  font-family: "Montserrat";
+  }
+  
 
 .nav-salas {
   display: flex;
@@ -393,7 +423,7 @@ onMount(() => {
   border-radius: 1rem;
   background: linear-gradient(135deg, #fbeae8, #ffffff);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  max-width: 500px;
+  max-width: 1200px;
   font-family: Montserrat, sans-serif;
 }
 

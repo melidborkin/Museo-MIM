@@ -65,11 +65,13 @@
           </h3>
             <div class="carousel-container">
 
-              <button class="arrow left" on:click={prevImage} aria-label="Anterior">
+              <button class="arrow left" on:click={() => scroll('left')} aria-label="Anterior">
+
                 <svg viewBox="0 0 24 24" width="30" height="30" stroke="black" fill="none" stroke-width="2">
                   <path d="M15 6L9 12l6 6" />
                 </svg>
               </button>
+
 
               <div class="carousel" bind:this={carouselContainer} > 
                 {#each century.images as image}
@@ -88,12 +90,15 @@
               </div>
              
 
-              <button class="arrow right" on:click={nextImage} aria-label="Siguiente">
+              <button class="arrow right" on:click={() => scroll('right')} aria-label="Siguiente">
                 <svg viewBox="0 0 24 24" width="30" height="30" stroke="black" fill="none" stroke-width="2">
                   <path d="M9 6l6 6-6 6" />
                 </svg>
               </button>
-            </div>
+
+
+
+              </div>
 
             <!-- Flourish Chart Placeholder -->
             <h3 class="features-title" style="margin-bottom: 1rem;">
@@ -265,6 +270,7 @@
     scrollbar-color: #db574d;
     overflow-y: hidden; 
     margin-top: 1px;
+    z-index: 1;
   }
 
   .image {
@@ -335,15 +341,7 @@
     padding: 0.5rem;
     border-radius: 50%;
     transition: background 0.3s ease;
-  }
-
-  .arrow svg {
-    stroke: #db574d;
-    transition: stroke 0.3s ease;
-  }
-
-  .arrow:hover svg {
-    stroke: #db574d;
+    z-index: 10;
   }
 
   

@@ -223,7 +223,7 @@ export const monumentImages = {
             alt: "Estatua de la Libertad",
         },
         {
-            url: "/images/image7",
+            url: "/images/image7.jpg",
             alt: "Big Ben",
         },
     ],
