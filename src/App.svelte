@@ -349,9 +349,7 @@ onMount(() => {
   .selector-salas {
   display: flex;
   gap: 1rem;
-  margin-top: 8rem;
-  margin-left: 8rem;
-  margin-bottom: 2rem;
+  margin: 8rem auto 2rem auto;
   max-width: 1200px;
   padding: 3rem, 2rem;
   font-size: 2rem;
@@ -364,8 +362,7 @@ onMount(() => {
     font-size: 1.125rem;
     line-height: 1.7;
     color: var(--text-color);
-    margin-left: 8rem;
-    margin-bottom: 2rem;
+    margin: 4rem auto 2rem auto;
     max-width: 1200px;
     padding: 3rem, 2rem;
     font-family: "Montserrat";
@@ -391,14 +388,13 @@ onMount(() => {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin: 3rem;
+  margin: 4rem auto 2rem auto;
   padding: 1rem;
   border-radius: 1rem;
   background: linear-gradient(135deg, #fbeae8, #ffffff);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   max-width: 500px;
   font-family: Montserrat, sans-serif;
-  margin-left: 8rem;
 }
 
 .nav-salas span {

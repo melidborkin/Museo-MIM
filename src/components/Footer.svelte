@@ -3,17 +3,15 @@
     {
       name: "Guadalupe Koruk",
       email: "gkoruk@mail.utdt.edu",
-      linkedin: "https://www.linkedin.com/in/guadalupe-koruk"
     },
     {
       name: "Paz Yunes",
-      email: "pyunes@mail.utdt.edu", 
-      linkedin: "https://www.linkedin.com/in/paz-yunes"
+      email: "myunesmarangoni@mail.utdt.edu", 
     },
     {
       name: "Melina Dborkin",
       email: "mdborkin@mail.utdt.edu",
-      linkedin: "https://www.linkedin.com/in/melinadborkin"
+      linkedin: "https://www.linkedin.com/in/melina-dborkin-932b18242/"
     }
   ];
 </script>
@@ -45,7 +43,7 @@
         <br>
         
         <div class="github-section"  style='margin-top: 0rem' >
-          <a href="https://github.com/melidborkin/Monumentos-Interactivo" target="_blank" rel="noopener noreferrer" class="github-link">
+          <a href="https://github.com/melidborkin/Museo-MIM" target="_blank" rel="noopener noreferrer" class="github-link">
             Ver proyecto en GitHub
           </a>
         </div>

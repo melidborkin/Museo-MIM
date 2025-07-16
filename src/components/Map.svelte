@@ -11,31 +11,7 @@
     <div class="map-card">
       <div class="map-content">
         <div class="map-placeholder">
-          <div class="placeholder-content">
-            <h4>Mapa Interactivo de Flourish</h4>
-            <p>
-              Aquí se integrará el mapa interactivo de Flourish mostrando la distribución geográfica de monumentos
-              por siglo y región.
-            </p>
-            <div class="legend">
-              <div class="legend-item">
-                <div class="legend-color" style="background: var(--bad-color)"></div>
-                <span>Siglos XI-XIII</span>
-              </div>
-              <div class="legend-item">
-                <div class="legend-color" style="background: var(--regular-color)"></div>
-                <span>Siglos XIV-XVI</span>
-              </div>
-              <div class="legend-item">
-                <div class="legend-color" style="background: var(--good-color)"></div>
-                <span>Siglos XVII-XIX</span>
-              </div>
-              <div class="legend-item">
-                <div class="legend-color" style="background: var(--excelent-color)"></div>
-                <span>Siglo XX</span>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>

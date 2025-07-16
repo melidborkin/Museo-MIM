@@ -34,7 +34,7 @@ export const monumentImages = {
             alt: "Catedral de Notre Dame",
         },
         {
-            url: "/images/image48.jpg",
+            url: "/images/image49.jpg",
             alt: "Templo Todai-ji",
         },
         {

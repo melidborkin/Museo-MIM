@@ -59,42 +59,10 @@
         </div>
 
         <div class="paired-section">
-            <!-- Flourish Chart Placeholder -->
-            <div class="chart-card">
-            <div class="chart-header">
-                <h4 class="chart-title">{century.graphs.description}</h4>
-            </div>
-             <div class="grafico-flourish">
-              <iframe
-                src={century.graphs.url}
-                title={century.graphs.description}
-                class="flourish-embed-iframe"
-                frameborder="0"
-                scrolling="no"
-                style="width: 100%; height: 600px;"
-                sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
-              </iframe>
-              </div>
-
-
-
-
-
-            {#if index == "1"}
-              <div class="grafico-flourish">
-                <iframe src='https://flo.uri.sh/visualisation/24255347/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-              </div>
-            {/if}
-
-
-
-
-            <div class="chart-content">
-                
-            </div>
-            </div>
-
             <!-- Image Carousel -->
+             <h3 class="features-title">
+            Imágenes de los monumentos
+          </h3>
             <div class="carousel-container">
 
               <button class="arrow left" on:click={prevImage} aria-label="Anterior">
@@ -127,6 +95,25 @@
               </button>
             </div>
 
+            <!-- Flourish Chart Placeholder -->
+            <h3 class="features-title" style="margin-bottom: 1rem;">
+              Visualizaciones de los monumentos
+            </h3>
+            <h4 class="chart-title">{century.graphs.description}</h4>
+            <div class="chart-card">
+              <div class="grafico-flourish">
+                <iframe
+                  src={century.graphs.url}
+                  title={century.graphs.description}
+                  class="flourish-embed-iframe"
+                  frameborder="0"
+                  scrolling="no"
+                  style="width: 100%; height: 600px;"
+                  sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation">
+                </iframe>
+                </div>
+            </div>
+
 
         </div>
       </div>
@@ -140,6 +127,7 @@
     padding: 3rem 2rem;
     background: var(--background-color);
     transition: all 0.6s ease;
+    overflow-x: hidden;
   }
   
   .century-section.even {
@@ -164,10 +152,6 @@
   
   .order-2 {
     order: 2;
-  }
-  
-  .order-1 {
-    order: 1;
   }
   
   .header {
@@ -203,9 +187,9 @@
   
   .features-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1rem;
-    align-items: center;
+    align-items: flex-start;
   }
   
   .features-title {
@@ -220,7 +204,7 @@
   .features-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1rem;
   }
   
   .feature-badge {
@@ -234,49 +218,39 @@
   }
 
   .paired-section {
-    display: flex;
+    display: column;
     width: 1380px;
     gap: 2rem;
     align-items: center;
+    margin-top: 4rem;
   }
   
   .chart-card {
     background: white;
     border-radius: 0.75rem;
-    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 900px;
   }
   
-  .chart-header {
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--grey-color);
-  }
   
   .chart-title {
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--text-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
   }
   
-  
-  .chart-content {
-    padding: 1.5rem;
-  margin-top: 50px;
-  margin-bottom: 70px;
-  }
-.grafico-flourish {
-  max-width: 800px;
+  .grafico-flourish {
+  max-width: 800px;;
   margin: 2rem auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Montserrat";
 }
+
   .carousel-container {
     position: relative;
-    width: 50%;
+    width: 80%;
     height: 400px;
-    overflow: hidden;
-    padding: 0 40px;
-    overflow: hidden;
+    overflow: auto;
     display: flex;
     align-items: center;
   }
@@ -284,7 +258,7 @@
   .carousel {
     display: flex;
     gap: 2rem;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     padding: 1rem;
     scrollbar-width: thin;
@@ -379,7 +353,7 @@
       gap: 3rem;
     }
     
-    .order-1, .order-2 {
+    .order-2 {
       order: unset;
     }
   }
